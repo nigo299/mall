@@ -1,4 +1,4 @@
-<route lang="json5" type="home">
+<route lang="json5" type="page">
 {
   style: {
     navigationBarTitleText: '首页',
@@ -33,9 +33,6 @@ const tabbar = ref(0)
 
 function handleClick(e) {
   console.log(e)
-  uni.navigateTo({
-    url: '/pages-sub/demo/index',
-  })
 }
 function onChange(e) {
   console.log(e)

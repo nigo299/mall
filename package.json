@@ -1,22 +1,16 @@
 {
   "name": "mall",
   "type": "commonjs",
-  "version": "1.5.0",
-  "description": "unibest - 最好的 uniapp 开发模板",
+  "version": "0.0.1",
+  "description": "mall",
   "author": {
-    "name": "codercup",
-    "zhName": "菲鸽",
-    "email": "1020103647@qq.com",
-    "github": "https://github.com/codercup",
-    "gitee": "https://gitee.com/codercup"
+    "name": "nigo"
   },
   "license": "MIT",
   "repository": "https://github.com/codercup/unibest",
-  "repository-gitee": "https://gitee.com/codercup/unibest",
   "bugs": {
     "url": "https://github.com/codercup/unibest/issues"
   },
-  "homepage": "https://codercup.github.io/unibest/",
   "engines": {
     "node": ">=18",
     "pnpm": ">=7.30"

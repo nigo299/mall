@@ -8,19 +8,13 @@ export default defineUniPages({
     navigationBarTextStyle: 'black',
     backgroundColor: '#FFFFFF',
   },
-  easycom: {
-    autoscan: true,
-    custom: {
-      '^wd-(.*)': 'wot-design-uni/components/wd-$1/wd-$1.vue',
-    },
-  },
   tabBar: {
-    color: '#999999',
-    selectedColor: '#018d71',
+    color: '#979797',
+    selectedColor: '#2494FF',
     backgroundColor: '#F8F8F8',
     borderStyle: 'black',
     height: '50px',
-    fontSize: '10px',
+    fontSize: '14px',
     iconWidth: '24px',
     spacing: '3px',
     list: [
@@ -28,14 +22,38 @@ export default defineUniPages({
         iconPath: 'static/tabbar/home.png',
         selectedIconPath: 'static/tabbar/homeHL.png',
         pagePath: 'pages/index/index',
-        text: '首页',
+        text: '主页',
+      },
+      {
+        iconPath: 'static/tabbar/home.png',
+        selectedIconPath: 'static/tabbar/homeHL.png',
+        pagePath: 'pages/index/gift',
+        text: '礼品',
+      },
+      {
+        iconPath: 'static/tabbar/home.png',
+        selectedIconPath: 'static/tabbar/homeHL.png',
+        pagePath: 'pages/index/test',
+        text: '',
+      },
+      {
+        iconPath: 'static/tabbar/home.png',
+        selectedIconPath: 'static/tabbar/homeHL.png',
+        pagePath: 'pages/index/ai',
+        text: 'AI',
       },
       {
         iconPath: 'static/tabbar/example.png',
         selectedIconPath: 'static/tabbar/exampleHL.png',
         pagePath: 'pages/index/about',
-        text: '关于',
+        text: '我的',
       },
     ],
+  },
+  easycom: {
+    autoscan: true,
+    custom: {
+      '^wd-(.*)': 'wot-design-uni/components/wd-$1/wd-$1.vue',
+    },
   },
 })
