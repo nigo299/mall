@@ -34,7 +34,7 @@ const tabbar = ref(0)
 function handleClick(e) {
   console.log(e)
   uni.navigateTo({
-    url: '/pages-sub/demo/index',
+    url: '/pages-sub/photoBin/index',
   })
 }
 function onChange(e) {
