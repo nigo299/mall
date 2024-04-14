@@ -6,16 +6,12 @@
 
 <template>
   <view class="containerbox">
-    <view v-if="!list.length">
-      <wd-skeleton :row-col="grid" animation="gradient" />
-    </view>
-
     <!-- <wd-grid v-else :column="3">
       <wd-grid-item use-slot v-for="(item, index) in list" :key="index" custom-class="custom-item">
         <wd-img :key="index" :width="122" :height="122" :src="item" :enable-preview="true" />
       </wd-grid-item>
     </wd-grid> -->
-    <wd-grid v-else :column="3">
+    <wd-grid :column="3">
       <wd-grid-item use-slot v-for="(item, index) in list" :key="index" custom-class="custom-item">
         <wd-img :key="index" :width="122" :height="122" :src="item" custom-class="custom-pic" />
         <view class="checkbox"></view>
