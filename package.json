@@ -8,9 +8,6 @@
   },
   "license": "MIT",
   "repository": "https://github.com/codercup/unibest",
-  "bugs": {
-    "url": "https://github.com/codercup/unibest/issues"
-  },
   "engines": {
     "node": ">=18",
     "pnpm": ">=7.30"
