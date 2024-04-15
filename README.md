@@ -22,5 +22,3 @@
 ## 📄 License
 
 [MIT](https://opensource.org/license/mit/)
-
-Copyright (c) 2024 菲鸽
