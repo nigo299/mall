@@ -13,7 +13,14 @@
     </wd-grid> -->
     <wd-grid :column="3">
       <wd-grid-item use-slot v-for="(item, index) in list" :key="index" custom-class="custom-item">
-        <wd-img :key="index" :width="122" :height="122" :src="item" custom-class="custom-pic" />
+        <wd-img
+          :key="index"
+          :width="122"
+          :height="122"
+          :src="item"
+          custom-class="custom-pic"
+          :lazy-load="true"
+        />
         <view class="checkbox"></view>
       </wd-grid-item>
     </wd-grid>

@@ -65,7 +65,14 @@
       <view class="block" hover-class="none" hover-stop-propagation="false">
         <view class="badge" hover-class="none" hover-stop-propagation="false">11</view>
         <image class="list-icon" :src="messageIcon" mode="aspectFit" lazy-load="true"></image>
-        <view class="list-text" hover-class="none" hover-stop-propagation="false">消息列表</view>
+        <view
+          class="list-text"
+          hover-class="none"
+          hover-stop-propagation="false"
+          @click="gotoPage('message/index')"
+        >
+          消息列表
+        </view>
       </view>
     </view>
     <view class="check-list" hover-class="none" hover-stop-propagation="false">
@@ -162,7 +169,7 @@ function onChange(e) {
 
 const gotoPage = (page: string) => {
   uni.navigateTo({
-    url: `/pages/index/${page}`,
+    url: `/pages-sub/${page}`,
   })
 }
 </script>
