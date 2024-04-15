@@ -18,7 +18,7 @@
       @change="onChange"
     ></wd-swiper>
     <view class="navbox">
-      <view class="left-nav">
+      <view class="left-nav" @click="gotoPage('reviewsBin/index')">
         <image :src="go" mode="aspectFill" lazy-load="true" class="go"></image>
         <image :src="leftNavIcon" mode="aspectFill" lazy-load="true" class="left-nav-icon"></image>
         <div class="left-nav-title">好评库</div>
