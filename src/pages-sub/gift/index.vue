@@ -89,7 +89,7 @@ import test from '../../static/images/photo/test.png'
 <style lang="scss" scoped>
 // here is scoped style
 .wrap {
-  height: 100vh;
+  min-height: 90vh;
   padding: 34rpx;
   background-color: #f4f4f4;
 }
