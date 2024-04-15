@@ -109,7 +109,7 @@
           <view class="borderline" hover-class="none" hover-stop-propagation="false"></view>
         </view>
       </template>
-      <view class="nodata" hover-class="none" hover-stop-propagation="false">
+      <view class="nodata" hover-class="none" hover-stop-propagation="false" v-else>
         <image
           class="nodatapic"
           :src="nodata"
@@ -148,7 +148,7 @@ const swiperList = ref([
   'https://img.yzcdn.cn/vant/cat.jpeg',
   'https://unpkg.com/wot-design-uni-assets/meng.jpg',
 ])
-const show = ref(false)
+const show = ref(true)
 
 function handleClick(e) {
   console.log(e)
