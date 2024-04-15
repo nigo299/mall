@@ -75,40 +75,56 @@
         <view class="list-more" hover-class="none" hover-stop-propagation="false">更多</view>
         <image class="more" :src="more" mode="aspectFit" lazy-load="true"></image>
       </view>
-      <view class="item-list" hover-class="none" hover-stop-propagation="false">
-        <image class="avatar" :src="avatar" mode="aspectFit" lazy-load="true"></image>
-        <view class="user-name" hover-class="none" hover-stop-propagation="false">匿名用户</view>
-        <view class="time" hover-class="none" hover-stop-propagation="false">1分钟前</view>
-        <view class="commit" hover-class="none" hover-stop-propagation="false">
-          这家店的卤味虾真是太好吃了！虾肉鲜嫩多汁,入 这家店的卤味虾真是太好吃了！虾肉鲜嫩多汁,入
-          口即...这家店的卤味虾真是太好吃了！虾肉鲜嫩多汁,入 口即...
+      <template v-if="show">
+        <view class="item-list" hover-class="none" hover-stop-propagation="false">
+          <image class="avatar" :src="avatar" mode="aspectFit" lazy-load="true"></image>
+          <view class="user-name" hover-class="none" hover-stop-propagation="false">匿名用户</view>
+          <view class="time" hover-class="none" hover-stop-propagation="false">1分钟前</view>
+          <view class="commit" hover-class="none" hover-stop-propagation="false">
+            这家店的卤味虾真是太好吃了！虾肉鲜嫩多汁,入 这家店的卤味虾真是太好吃了！虾肉鲜嫩多汁,入
+            口即...这家店的卤味虾真是太好吃了！虾肉鲜嫩多汁,入 口即...
+          </view>
+          <view class="pic-list" hover-class="none" hover-stop-propagation="false">
+            <image class="pic-item" :src="topRightNav" lazy-load="true"></image>
+            <image class="pic-item" :src="topRightNav" lazy-load="true"></image>
+            <image class="pic-item" :src="topRightNav" lazy-load="true"></image>
+          </view>
+          <button class="btn">已评价</button>
+          <view class="borderline" hover-class="none" hover-stop-propagation="false"></view>
         </view>
-        <view class="pic-list" hover-class="none" hover-stop-propagation="false">
-          <image class="pic-item" :src="topRightNav" lazy-load="true"></image>
-          <image class="pic-item" :src="topRightNav" lazy-load="true"></image>
-          <image class="pic-item" :src="topRightNav" lazy-load="true"></image>
+        <view class="item-list" hover-class="none" hover-stop-propagation="false">
+          <image class="avatar" :src="avatar" mode="aspectFit" lazy-load="true"></image>
+          <view class="user-name" hover-class="none" hover-stop-propagation="false">匿名用户</view>
+          <view class="time" hover-class="none" hover-stop-propagation="false">1分钟前</view>
+          <view class="commit" hover-class="none" hover-stop-propagation="false">
+            这家店的卤味虾真是太好吃了！虾肉鲜嫩多汁,入 这家店的卤味虾真是太好吃了！虾肉鲜嫩多汁,入
+            口即...这家店的卤味虾真是太好吃了！虾肉鲜嫩多汁,入 口即...
+          </view>
+          <view class="pic-list" hover-class="none" hover-stop-propagation="false">
+            <image class="pic-item" :src="topRightNav" lazy-load="true"></image>
+            <image class="pic-item" :src="topRightNav" lazy-load="true"></image>
+            <image class="pic-item" :src="topRightNav" lazy-load="true"></image>
+          </view>
+          <button class="btn">已评价</button>
+          <view class="borderline" hover-class="none" hover-stop-propagation="false"></view>
         </view>
-        <button class="btn">已评价</button>
-        <view class="borderline" hover-class="none" hover-stop-propagation="false"></view>
-      </view>
-      <view class="item-list" hover-class="none" hover-stop-propagation="false">
-        <image class="avatar" :src="avatar" mode="aspectFit" lazy-load="true"></image>
-        <view class="user-name" hover-class="none" hover-stop-propagation="false">匿名用户</view>
-        <view class="time" hover-class="none" hover-stop-propagation="false">1分钟前</view>
-        <view class="commit" hover-class="none" hover-stop-propagation="false">
-          这家店的卤味虾真是太好吃了！虾肉鲜嫩多汁,入 这家店的卤味虾真是太好吃了！虾肉鲜嫩多汁,入
-          口即...这家店的卤味虾真是太好吃了！虾肉鲜嫩多汁,入 口即...
+      </template>
+      <view class="nodata" hover-class="none" hover-stop-propagation="false">
+        <image
+          class="nodatapic"
+          :src="nodata"
+          mode="aspectFit"
+          lazy-load="false"
+          binderror=""
+          bindload=""
+        ></image>
+        <view class="nodatatext" hover-class="none" hover-stop-propagation="false">
+          暂无审核记录～
         </view>
-        <view class="pic-list" hover-class="none" hover-stop-propagation="false">
-          <image class="pic-item" :src="topRightNav" lazy-load="true"></image>
-          <image class="pic-item" :src="topRightNav" lazy-load="true"></image>
-          <image class="pic-item" :src="topRightNav" lazy-load="true"></image>
-        </view>
-        <button class="btn">已评价</button>
-        <view class="borderline" hover-class="none" hover-stop-propagation="false"></view>
       </view>
     </view>
   </view>
+  <tab-bar :active="0"></tab-bar>
 </template>
 
 <script lang="ts" setup>
@@ -123,6 +139,7 @@ import messageIcon from '../../static/images/home/message-icon.png'
 import clock from '../../static/images/home/clock.png'
 import more from '../../static/images/home/more.png'
 import avatar from '../../static/images/home/avatar.png'
+import nodata from '../../static/images/home/nodata.png'
 
 const swiperList = ref([
   'https://unpkg.com/wot-design-uni-assets/redpanda.jpg',
@@ -131,7 +148,7 @@ const swiperList = ref([
   'https://img.yzcdn.cn/vant/cat.jpeg',
   'https://unpkg.com/wot-design-uni-assets/meng.jpg',
 ])
-const tabbar = ref(0)
+const show = ref(false)
 
 function handleClick(e) {
   console.log(e)
@@ -494,5 +511,36 @@ const gotoPage = (page: string) => {
   padding-top: 16rpx;
   padding-bottom: 100px;
   background-color: #f4f4f4;
+}
+
+.nodata {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  background-color: #fff;
+  border-bottom-right-radius: 16rpx;
+  border-bottom-left-radius: 16rpx;
+}
+
+.nodatatext {
+  position: absolute;
+  top: 324rpx;
+  left: 250rpx;
+  width: 190rpx;
+  height: 36rpx;
+  font-size: 28rpx;
+  font-style: normal;
+  font-weight: 400;
+  color: #999;
+  text-align: center;
+  text-transform: none;
+}
+
+.nodatapic {
+  position: absolute;
+  top: 44rpx;
+  left: 202rpx;
+  width: 280rpx;
+  height: 280rpx;
 }
 </style>
