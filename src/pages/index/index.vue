@@ -65,7 +65,12 @@
       </view>
     </view>
     <view class="list-menu" hover-class="none" hover-stop-propagation="false">
-      <view class="block" hover-class="none" hover-stop-propagation="false">
+      <view
+        class="block"
+        hover-class="none"
+        hover-stop-propagation="false"
+        @click="gotoPage('gift-detail/index?id=111')"
+      >
         <image class="list-icon" :src="checkIcon" mode="aspectFit" lazy-load="true"></image>
         <view class="list-text" hover-class="none" hover-stop-propagation="false">审核列表</view>
       </view>

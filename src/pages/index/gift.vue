@@ -77,6 +77,7 @@
 
 <script lang="ts" setup>
 import test from '../../static/images/photo/test.png'
+
 // code here
 </script>
 
