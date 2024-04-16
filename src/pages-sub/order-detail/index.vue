@@ -129,7 +129,9 @@ const clip = () => {
 }
 
 .detail-desc {
+  width: 398rpx;
   height: 64rpx;
+  margin-top: 28rpx;
   font-size: 24rpx;
   font-style: norm al;
   font-weight: 400;
