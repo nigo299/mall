@@ -86,6 +86,14 @@ export default defineManifestConfig({
     },
     usingComponents: true,
     // __usePrivacyCheck__: true,
+    permission: {
+      'scope.camera': {
+        desc: '拍照',
+      },
+      'scope.album': {
+        desc: '访问相册',
+      },
+    },
   },
   'mp-alipay': {
     usingComponents: true,
