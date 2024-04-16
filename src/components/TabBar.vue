@@ -38,7 +38,7 @@
     </wd-tabbar-item>
     <wd-tabbar-item title="AI">
       <template #icon>
-        <wd-img round height="52rpx" width="52rpx" :src="$props?.active === 2 ? aiHL : ai"></wd-img>
+        <wd-img round height="52rpx" width="52rpx" :src="$props?.active === 3 ? aiHL : ai"></wd-img>
       </template>
     </wd-tabbar-item>
     <wd-tabbar-item title="我的">
@@ -47,7 +47,7 @@
           round
           height="52rpx"
           width="52rpx"
-          :src="$props?.active === 3 ? mineHL : mine"
+          :src="$props?.active === 4 ? mineHL : mine"
         ></wd-img>
       </template>
     </wd-tabbar-item>
@@ -70,15 +70,15 @@ const props = defineProps<{
 const routes = [
   '/pages/index/index',
   '/pages/index/gift',
-  '/pages/index/about',
-  '/pages/index/index',
+  '/pages/index/ai',
+  '/pages/index/ai',
   '/pages/index/index',
 ]
 const tabbar = ref(props.active || 0)
 
 function handleChange1({ value }: { value: number }) {
-  // console.log('value', value)
-  // console.log('tabbar.value', tabbar.value)
+  console.log('value', value)
+  console.log('tabbar.value', tabbar.value)
   if (value !== props.active) {
     uni.redirectTo({
       url: routes[value],
