@@ -69,7 +69,7 @@ const props = defineProps<{
 }>()
 const routes = [
   '/pages/index/index',
-  '/pages/index/request',
+  '/pages/index/gift',
   '/pages/index/about',
   '/pages/index/index',
   '/pages/index/index',

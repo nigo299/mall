@@ -24,7 +24,7 @@
         <div class="left-nav-title">好评库</div>
         <div class="left-nav-subtext">客人评价后审核</div>
       </view>
-      <view class="right-nav">
+      <view class="right-nav" @click="gotoPage('gift/index')">
         <view class="right" hover-class="none" hover-stop-propagation="false">
           <image class="top-right-nav" :src="topRightNav" mode="aspectFit" lazy-load="true"></image>
           <image
@@ -33,6 +33,7 @@
             mode="aspectFit"
             lazy-load="true"
           ></image>
+          <image :src="redgo" lazy-load="true" class="redgo"></image>
           <view class="right-top-title" hover-class="none" hover-stop-propagation="false">
             礼品库
           </view>
@@ -40,7 +41,12 @@
             购买的礼品
           </view>
         </view>
-        <view class="right" hover-class="none" hover-stop-propagation="false">
+        <view
+          class="right"
+          hover-class="none"
+          hover-stop-propagation="false"
+          @click="gotoPage('photoBin/index')"
+        >
           <image class="top-right-nav" :src="rightBotNav" mode="aspectFit" lazy-load="true"></image>
           <image
             class="right-bot-icon"
@@ -48,6 +54,7 @@
             mode="aspectFit"
             lazy-load="true"
           ></image>
+          <image :src="yellowgo" lazy-load="true" class="yellowgo"></image>
           <view class="right-top-title" hover-class="none" hover-stop-propagation="false">
             图片库
           </view>
@@ -147,6 +154,8 @@ import clock from '../../static/images/home/clock.png'
 import more from '../../static/images/home/more.png'
 import avatar from '../../static/images/home/avatar.png'
 import nodata from '../../static/images/home/nodata.png'
+import redgo from '../../static/images/home/redgo.png'
+import yellowgo from '../../static/images/home/yellowgo.png'
 
 const swiperList = ref([
   'https://unpkg.com/wot-design-uni-assets/redpanda.jpg',
@@ -549,5 +558,21 @@ const gotoPage = (page: string) => {
   left: 202rpx;
   width: 280rpx;
   height: 280rpx;
+}
+
+.redgo {
+  position: absolute;
+  right: 114rpx;
+  bottom: 34rpx;
+  width: 60rpx;
+  height: 28rpx;
+}
+
+.yellowgo {
+  position: absolute;
+  right: 114rpx;
+  bottom: 34rpx;
+  width: 60rpx;
+  height: 28rpx;
 }
 </style>
