@@ -93,6 +93,9 @@ export default defineManifestConfig({
       'scope.album': {
         desc: '访问相册',
       },
+      Payment: {
+        desc: '支付',
+      },
     },
   },
   'mp-alipay': {
