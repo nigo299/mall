@@ -88,13 +88,10 @@ export default defineManifestConfig({
     // __usePrivacyCheck__: true,
     permission: {
       'scope.camera': {
-        desc: '拍照',
+        desc: '需要使用您的摄像头',
       },
-      'scope.album': {
-        desc: '访问相册',
-      },
-      Payment: {
-        desc: '支付',
+      'scope.writePhotosAlbum': {
+        desc: '需要保存图片到您的相册',
       },
     },
   },
