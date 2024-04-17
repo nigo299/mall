@@ -20,14 +20,7 @@
             :key="index"
             custom-class="custom-item"
           >
-            <wd-img
-              :key="index"
-              :width="122"
-              :height="122"
-              :src="item"
-              custom-class="custom-pic"
-              :lazy-load="true"
-            />
+            <image class="custom-pic" :src="item"></image>
             <!-- <view class="checkbox"></view> -->
           </wd-grid-item>
         </wd-grid>
@@ -112,7 +105,6 @@ const list = ref([
 <style lang="scss" scoped>
 .containerbox {
   min-height: 90vh;
-  padding: 10px;
   background-color: #f4f4f4;
 }
 
@@ -124,13 +116,19 @@ const list = ref([
 }
 
 :deep(.custom-item) {
-  height: 122px !important;
-  padding-top: 6rpx;
+  box-sizing: border-box !important;
+  flex-direction: row !important;
+  padding: 4rpx !important;
   text-align: left !important;
+  /* stylelint-disable-next-line selector-class-pattern */
+  .wd-grid-item__content {
+    padding: 0rpx !important;
+  }
 }
 
-:deep(.custom-pic) {
-  position: relative;
+.custom-pic {
+  width: 244rpx;
+  height: 244rpx;
 }
 
 .checkbox {

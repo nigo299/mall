@@ -30,7 +30,7 @@
     <view class="text-container" hover-class="none" hover-stop-propagation="false">
       <wd-textarea v-model="inputVal" placeholder="如：停车方便，上菜快，服务好" />
     </view>
-    <button class="sub-btn">生成(剩余44次)</button>
+    <button class="sub-btn" @click="gotoPage('ai-generate/index')">生成(剩余44次)</button>
   </view>
 
   <tab-bar :active="3"></tab-bar>
@@ -38,6 +38,11 @@
 
 <script lang="ts" setup>
 const inputVal = ref<string>('')
+const gotoPage = (page: string) => {
+  uni.navigateTo({
+    url: `/pages-sub/${page}`,
+  })
+}
 </script>
 
 <style lang="scss" scoped>

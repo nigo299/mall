@@ -72,7 +72,7 @@ const routes = [
   '/pages/index/gift',
   '/pages/index/ai',
   '/pages/index/ai',
-  '/pages/index/index',
+  '/pages/index/mine',
 ]
 const tabbar = ref(props.active || 0)
 

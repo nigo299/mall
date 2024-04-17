@@ -14,15 +14,7 @@
           :key="index"
           custom-class="custom-item"
         >
-          <wd-img
-            :key="index"
-            :width="122"
-            :height="122"
-            :src="item"
-            custom-class="custom-pic"
-            :lazy-load="true"
-            @load="checkboxVisible.push(index)"
-          />
+          <image class="custom-pic" :src="item" @load="checkboxVisible.push(index)"></image>
 
           <view v-if="checkboxVisible?.includes(index)" @click="selectPic(item)">
             <image class="select" :src="select" v-if="selectPics?.includes(item)"></image>
@@ -82,7 +74,8 @@ const save = () => {
 <style lang="scss" scoped>
 .containerbox {
   min-height: 90vh;
-  padding: 10px;
+
+  // padding: 10px;
   background-color: #f4f4f4;
 }
 
@@ -94,13 +87,20 @@ const save = () => {
 }
 
 :deep(.custom-item) {
-  height: 122px !important;
-  padding-top: 6rpx;
+  box-sizing: border-box !important;
+  flex-direction: row !important;
+  padding: 4rpx !important;
   text-align: left !important;
+  /* stylelint-disable-next-line selector-class-pattern */
+  .wd-grid-item__content {
+    padding: 0rpx !important;
+  }
 }
 
-:deep(.custom-pic) {
+.custom-pic {
   position: relative;
+  width: 244rpx;
+  height: 244rpx;
 }
 
 .checkbox {
