@@ -353,6 +353,6 @@ function handleSubmit() {
 }
 
 .footer {
-  padding: 12px;
+  padding: 20px;
 }
 </style>
