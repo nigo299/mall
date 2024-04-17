@@ -9,7 +9,7 @@
 
 <template>
   <view class="wrap">
-    <view class="listitem">
+    <view class="listitem" @click="gotoPage('user-info/index')">
       <view class="itemwrap">
         <image class="navicon" :src="note"></image>
         <view class="item-text">商家资料填写</view>
@@ -35,6 +35,12 @@ import arrow from '../../static/images/mine/arrow.png'
 import note from '../../static/images/mine/note.png'
 import person from '../../static/images/mine/person.png'
 import quit from '../../static/images/mine/quit.png'
+
+const gotoPage = (page: string) => {
+  uni.navigateTo({
+    url: `/pages-sub/${page}`,
+  })
+}
 </script>
 
 <style lang="scss" scoped>
