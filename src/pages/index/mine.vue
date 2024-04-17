@@ -13,7 +13,7 @@
       <image class="avatar" :src="avatar"></image>
       <view class="name">罗大虾(海昌路)店</view>
       <view class="address">天府大道华阳街道65号</view>
-      <image class="icon" :src="icon"></image>
+      <image class="icon" :src="icon" @click="gotoPage('person-config/index')"></image>
       <!-- <view class="vipbanner">
         <image class="vip" :src="vipbanner"></image>
         <image class="diamond" :src="diamond"></image>
@@ -121,7 +121,7 @@ console.log(PLATFORM)
 
 const gotoPage = (page: string) => {
   uni.navigateTo({
-    url: `/pages/index/${page}`,
+    url: `/pages-sub/${page}`,
   })
 }
 </script>
